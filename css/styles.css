@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  text-align: center;
+  /* NOTE: text-allign : center inside the parent will center everything that has no width to center else we have to do manually like for h1 */
+  font-family: 'Quicksand', sans-serif;
+  /* NOTE: font-family: "Times New Roman" , sans-serif; syntax is such that if browser do not get times new roman it will use any other font from sans-serif family */
+  /* NOTE:  font-family: Arial, Helvetica, sans-serif; means go to arial if not present go to helvetica if not present go to any sans-serif available */
+  /* NOTE: link of CSS fonts : https://www.w3schools.com/css/css_font.asp  */
+  /* NOTE: There are bydef (serif) , sans-serif , monospace , fantasy (not recommended) , cursive (not recommended) fonts which too have different types */
+  /* NOTE: There are some fonts which a browser is unable to render so we use web safe fonts which most browser usually render easily */
+  /* NOTE: If we want everyone to see the same font we have embeeded then we can use goggle fonts and give a link in our index.html body to fetch the font from goggle fonts and paste command here accordingly like we do for body,h1,h2 */
+  /* NOTE: link to goggle font : https://fonts.google.com/ */
+  /*  background-color: #F2FFE9; */
+}
+
+h1 {
+  margin: 0;
+  /* width: 100px; */
+  /* NOTE: if we increase its width now text is not allign at center although its still inside that body
+  so we use margin : auto means automatically give margin according to its need and we too margin : 0 auto 0 auto means 0 margin from top and bottom and auto margin from left and right */
+  /* margin: 0 auto 0 auto; */
+  /* NOTE: margin property follow this order : margin-top margin-right margin-bottom margin-left if margin : 100px 20px means top bottom to 100 and left right to 20 */
+  /* NOTE: link for margin : https://www.w3schools.com/css/css_margin.asp */
+  font-family: 'Twinkle Star', cursive;
+  font-size: 375%;
+  /* NOTE: Now if we want the text to change as the user change the font size in browser bydefault through settings we need to make it dynamic which we can do by not using pixel and using %age sign , 100% = 16px
+  so we need 60 px means 60*100/16 = 375% and it is same as 1em means 1 times size of letter M so 100% = 16px = 1em */
+  /* NOTE: But if somebody zooms in the website then size of everything will change there is no dynamic then everything will change in size */
+  /* NOTE: if we put 5.6rem means whatever may be size of font in body keep the size if h1 to be 5.6em only (feature in CSS3) */
+  color: #146356;
+  line-height: 1.5;
+  /* NOTE: line-height increase the space between what is written in h1 and above and below it , it does not have unit */
+}
+
+p {
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+}
+
+/* NOTE: padding means there should be some space between our text and the border */
+/* NOTE: margin means the space between any two elements on the screen */
+/* NOTE: No need to write px with value 0 its only 0 not 0px */
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.5rem;
+  color: #146356;
+  font-weight: normal;
+}
+
+h3 {
+  color: #146356;
+}
+
+anchor {
+  color: #146356;
+}
+
+div {
+  /* height: 500px; */
+  background-color: #F2FFE9;
+  /*margin: 10px; */
+  /*border: solid green;
+  border-width: thin; */
+}
+
+/* NOTE: CSS box model : https://www.w3schools.com/css/css_boxmodel.asp */
+/* NOTE: CSS Display property : https://www.w3schools.com/cssref/pr_class_display.asp
+1. Block means element take full width blocking other elements to sit with it like p , ls etc , we can change width of block elements
+2. Now if we want to underline "pro" in the word "Programmer" then we will use span which is inline element means
+it takes as much height and width it needs.they never block other elements to come there way.
+we cannoth change the width of inline elements. for example - spans , images , anchors are some inline elements
+3. so using display : inline we can make a block element to inline but then we cannot change its width
+4. similarly we can make any block element as inline then we can change its width.
+5. There is another option called display : inline-block by which we can use both feature of inline and block our images are inline-block by default
+6. we can use display:none then our element will not be seen its space is also gone but if we do visiblity : hidden then we cannot see our element but its space is still conserved
+*/
+.pro {
+  text-decoration: underline;
+  background-color: #A3DA8D;
+  display: inline-block;
+}
+
+.top-image {
+  position: absolute;
+  left: 750px;
+  /* NOTE: position : static means default html position line by line */
+  /* NOTE: By making position relative we can change its position relative like position: relative; to where it would have been if it was static. we can shift from left right top bottom like : top : 20px;*/
+  /* NOTE: Absoluet positioning means we change the position of element relative to its parent means body of page , absolute positioning of one element disturb the flow for others also and make the element to be positioned out of part of static flow
+  like :   position: absolute; and top: 100px; and right: 200px; changes the position of image with respect to body */
+  /* NOTE: By default there is some internal CSS applied by the browser according to which the margin is not 0 so we have to do it manually */
+}
+
+.bottom-image {
+  position: absolute;
+  left: 350px;
+  top: 200px;
+}
+
+.text {
+  position: relative;
+  top: 50px;
+}
+
+.mountain-image {
+  position: relative;
+}
+
+.profile-image {
+  border-radius: 90%;
+  margin-top: 50px;
+}
+
+.profile {
+  width: auto;
+  height: auto;
+  border-width: 0;
+  background-color: white;
+}
+
+.touch {
+  line-height: 3;
+  margin-top: 20px;
+}
+
+.skills {
+  width: 50%;
+  margin: auto;
+  background-color: white;
+}
+
+.skill-row {
+  text-align: left;
+  background-color: white;
+}
+
+.bottom-container {
+  width: auto;
+  height: auto;
+  margin: 0 auto 0 auto;
+  line-height: 5;
+  background-color: #A3DA8D;
+}
+a{
+   color: black;
+   padding: 1%;
+   font-family: 'Merriweather', serif;
+   font-weight: bold;
+   text-decoration: none;
+}
+a:hover{
+  color: red;
+}
+.copyright{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.coding {
+  border-radius: 100%;
+  float: left;
+  /* NOTE: float : https://www.w3schools.com/css/css_float.asp
+  us float property only when we need to wrap text around not for positioning of image */
+  margin-right: 30px;
+  line-height: 2;
+  background-color: white;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #EAEAEA;
+  border-width: 5px;
+  /* WARNING: height: 5px; */
+  width: 5%;
+  margin: 50px auto;
+  /*
+  border-style: dotted;
+  border-color: black;
+  width: 10%;;
+  border-width: 1;
+  */
+}
+
+.contact-section {
+  width: auto;
+  height: auto;
+  margin: 0 auto 0 auto;
+  background-color: white;
+}
+
+.footer-link {
+  line-height: 5;
+  margin: 0;
+}
+
+.middle-container {
+  margin-bottom: 50px;
+  background-color: white;
+}
+
+.contact-me {
+  background-color: white;
+}
+
+.btn {
+  background: #A6CF98;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  line-height: 5;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+.line {
+  visibility: hidden;
+}
